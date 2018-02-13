@@ -1484,7 +1484,7 @@ undo_layer_visibility(Diagram *dia, Layer *layer, gboolean exclusive)
 
   for (i = 0; i < layers->len; i++) {
     Layer *temp_layer = (Layer *) g_ptr_array_index(layers, i);
-    visibilities = g_list_append(visibilities, (gpointer)temp_layer->visible);
+    visibilities = g_list_append(visibilities, (gpointer)(intptr_t)temp_layer->visible);
   }
 
   change->original_visibility = visibilities;
