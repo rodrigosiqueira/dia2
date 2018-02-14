@@ -629,7 +629,7 @@ if test "x$with_hardbooks" = "xno"; then
 else
   AM_CONDITIONAL(WITH_HTMLDOC, test "x$xsltproc" != "xno")
   AM_CONDITIONAL(WITH_PDFDOC, test "x$dblatex" != "xno")
-  AM_CONDITIONAL(WITH_PSDOC, test "x$dblatex" != "xno")
+  AM_CONDITIONAL(WITH_PSDOC, test "xno" != "xno")
   if test "x$dblatex" != "xno" ; then
     hardbook_ok=yes
   else 
